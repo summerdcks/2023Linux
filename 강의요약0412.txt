@@ -1,0 +1,104 @@
+	C	 R	U	D
+사용자	adduser	 id		deluser
+그룹	addgroup groups		delgroup
+파일	touch	 cat ...		rm
+디렉토리	mkdir	 ls		rmdir
+
+netstat -ant | grep -> linux
+netstat -ant | findstr 22 -> win
+
+리눅스는 기본적으로 모두 파일로 취급
+파이프 : 앞의 명령어의 output을 뒤의 명령어의 input으로 만들어줌
+
+grep : 22번 글자가 나와있는 line만 잡아서 출력하겠다
+netstat -ant | grep ( | moniter)가 생략됨
+
+리다이렉션(Redirection)
+방향을 바꿔준다
+
+> 내용을 덮어씀 
+netstat -ant	> 	netstat.out
+(네트워크 상태가 출력됨) > (지정된 곳으로 출력을 보냄)
+리눅스한테는 파일이나 모니터나 마찬가지
+결국 파일에 내용이 적힌다
+
+netstat.out
+= ./netstat.out
+= /home/kopo00/netstat.out
+
+>> 내용을 밑에 추가
+
+///////////////////////
+ctrl + c 작업종료, 강제종료
+ctrl + d 정상종료
+ctrl + z 백그라운드로 전환
+
+ps 현재 실행되고 있는 프로세스를 보여준다
+pstree 트리형태로 보여준다
+
+포그라운드 사용자가 인터렉션하고 있는 화면에 나옴
+백그라운드 사용자와 상관없이 별도로 실행
+
+프로그램이 실행이 완료되면 화면에 뜨는것 포그라운드
+실행하면 바로 prompt가 뜸 백그라운드
+
+기본적으로 bash에서 실행되는 것은 포그라운드
+백그라운드를 실행하고 싶을 때는 명령어 뒤에 &를 붙여주면 된다
+ex. ls &
+///////////////////////////
+
+파일 비교
+
+c changed
+d deleted
+a appended
+
+
+////////////////////
+리눅스에서는 확장자가 의미를 가지지 않는다
+
+tar로 묶으면 보통 filename.tar 로 표시
+tar.gz 타르로 묶여있는데 압축까지 되어있구나 유추가능
+이름은 마음대로 쓸 수 있어서 절대적인건 아님
+
+` esc아래 그레이브
+
+ls -al
+`ls -al` 그레이브 안이 먼저 실행이 되고 그 결과값이 앞으로 간다
+
+⑧ tar -xvf ../tarfile `tar -tf ../tarfile | grep ‘lady*'` 
+
+1파이프앞부분 : 별다른게 없으면 파이프 뒤로 보내줌
+2파이프뒷부분 : grep에서 파일목록을 뒤져서 tarfile 경로 안에 lady라는 글자가 있는
+조건에 걸리는 파일을 뽑아서 맨앞으로 보내줌
+
+../tarfile"이라는 경로에 위치한 "tarfile"이라는 압축 파일을 "tar" 명령어를 사용하여 해제합니다.
+"tar -tf ../tarfile" 명령어를 사용하여 "tarfile"에 포함된 파일들의 리스트를 출력하고, 그 중 "lady*"이라는 이름 패턴을 가진 파일들을 "grep" 명령어를 사용하여 필터링합니다.
+"grep" 명령어로 필터링된 파일들을 "tar -xvf" 명령어를 사용하여 "../tarfile"에 위치한 "tarfile"에서 추출합니다.
+
+평가식, 연산이 된다
+
+'ls -al' :string 문자열
+"ls -al" :string 문자열
+명령어로 시동되지 않음
+
+9번은 reverse.c를 뽑아내서
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

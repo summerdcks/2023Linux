@@ -1,0 +1,30 @@
+https://gall.dcinside.com/board/lists/?id=dcbest
+https://gall.dcinside.com/board/lists/?id=dcbest&page=2&_dcbest=1
+https://gall.dcinside.com/board/lists/?id=dcbest&page=3&_dcbest=1
+
+gall.dcinside.com : DN (도메인 네임)
+/board/lists : path
+?~끝까지 : parameter
+
+? : parameter의 시작
+& : parameter가 여러개인 경우
+
+
+public int add(int a, int b) {
+  return a+b;
+}
+
+main() {
+  int r = add(3,5);
+}
+
+add라는 함수를 호출하는데 a: 3, b: 5다 key : value(parameter)
+
+board/lists라는 path를 호출하는데
+(key : value)
+id=dcbest
+page=2
+_dcbest=1
+라는 parameter를 넣어준다
+
+모든 url의 resource가 1:1로 mapping되어있다

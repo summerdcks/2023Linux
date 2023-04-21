@@ -1,0 +1,50 @@
+보안에서 중요한 두가지 키워드
+인증 : 로그인
+권한 : 등급
+
+ls -al = ll
+
+기본적으로 리눅스에서는 1000번부터 사용자번호를 부여한다
+
+사용자도 그룹도 아닌 것 other
+
+sudo vi /etc/passwd
+nologin 특정 사용자 로그인 막는법
+
+sudo vi /etc/group
+sudo:x:27:kopo36
+sudo권한을 주고 싶으면 그룹에 추가
+
+vi에서 esc 누르고
+ :set nu	번호 보여줌
+:set nonu 번호 없애줌
+
+username:password:uid:gid:gecos:homedir:shell
+
+
+-  rw-   r--    r--    
+   유저  그룹  other
+
+
+read권한
+write권한
+x 실행권한
+
+알파벳은 1
+짝대기는 0
+
+rw-   =    110(2진수)   =   6
+---   =   000   =   0
+
+
+d는 디렉토리
+디렉토리인 경우에는 실행권한이 있어야함
+
+
+os가 기본적으로 관리하는 사항
+cpu
+memory
+storage
+
+os에서 여러 process를 관리할때 적절히 자원 분배
+
